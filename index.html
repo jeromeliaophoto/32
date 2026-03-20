@@ -46,7 +46,9 @@ html, body
 jQuery(document).ready(function(){
 
     jQuery('#wr360PlayerId').rotator({
-        licenseFileURL: 'license.lic',
+        // 1. 如果你沒有 license.lic 檔案，請把下面這行刪掉或像這樣註解掉
+        // licenseFileURL: 'license.lic', 
+        
         configFileURL: '360_assets/BigAfu_4K/BigAfu_4K.xml',
         graphicsPath: 'imagerotator/html/img/thin',
         alt: '360 degree view - BigAfu_4K',
@@ -54,10 +56,10 @@ jQuery(document).ready(function(){
         responsiveMinHeight: 0,
         googleEventTracking: false,
         
-        // --- 🚀 修正全螢幕變白的終極補丁 ---
-        fullScreenApi: true,   // 強制開啟瀏覽器原生全螢幕 API
-        fullScreenLink: ""     // 確保連結為空，切斷「開啟新分頁」的念頭
-        inBrowserFullScreen: true  // 👈 加這一行，強制它原地放大
+        // --- 修正全螢幕的關鍵三行（注意逗號！） ---
+        fullScreenApi: true,
+        inBrowserFullScreen: true,
+        fullScreenLink: ""
     });
 
 });
